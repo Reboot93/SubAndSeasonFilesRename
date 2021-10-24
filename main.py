@@ -17,10 +17,6 @@ class MainWindow(QWidget, Ui_Form):
         # global
         super(MainWindow, self).__init__(parent)
         self.setupUi(self)
-        # self.setWindowTitle('片库管理助手 V1.0')
-        # ==/ Icon设置 /===
-        # self.setWindowIcon(QIcon('icon/256x256.ico'))
-
         # ==/ 按键信号设置 /================
         # 剧集界面按键
         self.pushButton_rename_add.clicked.connect(lambda: self.season_files_add())
@@ -221,6 +217,7 @@ class MainWindow(QWidget, Ui_Form):
                     QMessageBox.information(self, '修改成功', '字幕文件名修改成功，请继续操作或关闭本程序')
                     self.listWidget_sub.clear()
                     self.listWidget_movie.clear()
+                    self.flash()
                 except:
                     QMessageBox.warning(self, '修改失败', '修改字幕文件名失败')
             if reply == QMessageBox.No:
