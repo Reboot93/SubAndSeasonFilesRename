@@ -119,9 +119,9 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>10</y>
+       <y>6</y>
        <width>581</width>
-       <height>391</height>
+       <height>395</height>
       </rect>
      </property>
      <property name="title">
@@ -131,7 +131,7 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>350</y>
+        <y>354</y>
         <width>31</width>
         <height>31</height>
        </rect>
@@ -150,7 +150,7 @@
       <property name="geometry">
        <rect>
         <x>50</x>
-        <y>350</y>
+        <y>354</y>
         <width>61</width>
         <height>31</height>
        </rect>
@@ -172,7 +172,7 @@
       <property name="geometry">
        <rect>
         <x>110</x>
-        <y>350</y>
+        <y>354</y>
         <width>131</width>
         <height>31</height>
        </rect>
@@ -194,7 +194,7 @@
       <property name="geometry">
        <rect>
         <x>470</x>
-        <y>350</y>
+        <y>354</y>
         <width>101</width>
         <height>31</height>
        </rect>
@@ -217,7 +217,7 @@
       <property name="geometry">
        <rect>
         <x>250</x>
-        <y>350</y>
+        <y>354</y>
         <width>101</width>
         <height>31</height>
        </rect>
@@ -240,7 +240,7 @@
       <property name="geometry">
        <rect>
         <x>360</x>
-        <y>350</y>
+        <y>354</y>
         <width>101</width>
         <height>31</height>
        </rect>
@@ -266,7 +266,7 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>20</y>
+        <y>24</y>
         <width>561</width>
         <height>321</height>
        </rect>
@@ -277,9 +277,9 @@
      <property name="geometry">
       <rect>
        <x>600</x>
-       <y>20</y>
+       <y>10</y>
        <width>284</width>
-       <height>381</height>
+       <height>391</height>
       </rect>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout">
@@ -412,7 +412,7 @@
      <property name="geometry">
       <rect>
        <x>10</x>
-       <y>10</y>
+       <y>6</y>
        <width>431</width>
        <height>351</height>
       </rect>
@@ -420,11 +420,14 @@
      <property name="title">
       <string>字幕文件</string>
      </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
      <widget class="QPushButton" name="pushButton_sub_up">
       <property name="geometry">
        <rect>
         <x>390</x>
-        <y>120</y>
+        <y>110</y>
         <width>31</width>
         <height>31</height>
        </rect>
@@ -441,8 +444,8 @@
       </property>
       <property name="iconSize">
        <size>
-        <width>29</width>
-        <height>29</height>
+        <width>31</width>
+        <height>31</height>
        </size>
       </property>
      </widget>
@@ -450,7 +453,7 @@
       <property name="geometry">
        <rect>
         <x>390</x>
-        <y>170</y>
+        <y>150</y>
         <width>31</width>
         <height>31</height>
        </rect>
@@ -467,8 +470,8 @@
       </property>
       <property name="iconSize">
        <size>
-        <width>29</width>
-        <height>29</height>
+        <width>31</width>
+        <height>31</height>
        </size>
       </property>
      </widget>
@@ -623,12 +626,38 @@
        </rect>
       </property>
      </widget>
+     <widget class="QPushButton" name="pushButton_sub_flash">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>220</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>下移一位</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>icon/flash.png</normaloff>icon/flash.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>31</width>
+        <height>31</height>
+       </size>
+      </property>
+     </widget>
     </widget>
     <widget class="QGroupBox" name="groupBox_2">
      <property name="geometry">
       <rect>
        <x>450</x>
-       <y>10</y>
+       <y>6</y>
        <width>431</width>
        <height>351</height>
       </rect>
@@ -636,11 +665,14 @@
      <property name="title">
       <string>视频文件</string>
      </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
      <widget class="QPushButton" name="pushButton_movie_up">
       <property name="geometry">
        <rect>
         <x>390</x>
-        <y>120</y>
+        <y>110</y>
         <width>31</width>
         <height>31</height>
        </rect>
@@ -657,8 +689,8 @@
       </property>
       <property name="iconSize">
        <size>
-        <width>29</width>
-        <height>29</height>
+        <width>31</width>
+        <height>31</height>
        </size>
       </property>
      </widget>
@@ -666,7 +698,7 @@
       <property name="geometry">
        <rect>
         <x>390</x>
-        <y>170</y>
+        <y>150</y>
         <width>31</width>
         <height>31</height>
        </rect>
@@ -683,8 +715,8 @@
       </property>
       <property name="iconSize">
        <size>
-        <width>29</width>
-        <height>29</height>
+        <width>31</width>
+        <height>31</height>
        </size>
       </property>
      </widget>
@@ -839,84 +871,40 @@
        </rect>
       </property>
      </widget>
+     <widget class="QPushButton" name="pushButton_movie_flash">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>220</y>
+        <width>31</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="toolTip">
+       <string>下移一位</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>icon/flash.png</normaloff>icon/flash.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>31</width>
+        <height>31</height>
+       </size>
+      </property>
+     </widget>
     </widget>
-    <widget class="QWidget" name="horizontalLayoutWidget">
+    <widget class="QPushButton" name="pushButton_sub_start">
      <property name="geometry">
       <rect>
-       <x>10</x>
-       <y>360</y>
-       <width>243</width>
-       <height>51</height>
-      </rect>
-     </property>
-     <layout class="QHBoxLayout" name="horizontalLayout">
-      <item>
-       <widget class="QLabel" name="label_5">
-        <property name="font">
-         <font>
-          <family>微软雅黑</family>
-          <pointsize>9</pointsize>
-         </font>
-        </property>
-        <property name="text">
-         <string>字幕文件后缀</string>
-        </property>
-        <property name="textFormat">
-         <enum>Qt::AutoText</enum>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QRadioButton" name="radioButton_ssa">
-        <property name="font">
-         <font>
-          <family>微软雅黑</family>
-          <pointsize>10</pointsize>
-         </font>
-        </property>
-        <property name="text">
-         <string notr="true">.SSA</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QRadioButton" name="radioButton_srt">
-        <property name="font">
-         <font>
-          <family>微软雅黑</family>
-          <pointsize>10</pointsize>
-         </font>
-        </property>
-        <property name="text">
-         <string notr="true">.SRT</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QRadioButton" name="radioButton_ass">
-        <property name="font">
-         <font>
-          <family>微软雅黑</family>
-          <pointsize>10</pointsize>
-         </font>
-        </property>
-        <property name="text">
-         <string notr="true">.ASS</string>
-        </property>
-        <property name="checked">
-         <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-    <widget class="QPushButton" name="pushButton_rename">
-     <property name="geometry">
-      <rect>
-       <x>740</x>
-       <y>370</y>
-       <width>121</width>
-       <height>31</height>
+       <x>720</x>
+       <y>366</y>
+       <width>161</width>
+       <height>36</height>
       </rect>
      </property>
      <property name="font">
@@ -940,6 +928,149 @@
        <height>29</height>
       </size>
      </property>
+    </widget>
+    <widget class="QGroupBox" name="groupBox_sub_lan">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>360</y>
+       <width>701</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>添加字幕语言标注</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+     </property>
+     <property name="flat">
+      <bool>false</bool>
+     </property>
+     <property name="checkable">
+      <bool>true</bool>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
+     </property>
+     <widget class="QLabel" name="label_18">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>10</y>
+        <width>51</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>微软雅黑</family>
+        <pointsize>9</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string>字幕语言</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::AutoText</enum>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="radioButton_lan_eng">
+      <property name="geometry">
+       <rect>
+        <x>480</x>
+        <y>10</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>微软雅黑</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string notr="true">eng</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>icon/eng.png</normaloff>icon/eng.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>23</width>
+        <height>23</height>
+       </size>
+      </property>
+      <property name="checked">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="radioButton_lan_cht">
+      <property name="geometry">
+       <rect>
+        <x>390</x>
+        <y>10</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>微软雅黑</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string notr="true">cht</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>icon/cht.png</normaloff>icon/cht.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>23</width>
+        <height>23</height>
+       </size>
+      </property>
+      <property name="checked">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="radioButton_lan_chs">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>10</y>
+        <width>81</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>微软雅黑</family>
+        <pointsize>11</pointsize>
+       </font>
+      </property>
+      <property name="text">
+       <string notr="true">chs</string>
+      </property>
+      <property name="icon">
+       <iconset>
+        <normaloff>icon/chs.png</normaloff>icon/chs.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>23</width>
+        <height>23</height>
+       </size>
+      </property>
+      <property name="checked">
+       <bool>true</bool>
+      </property>
+     </widget>
     </widget>
    </widget>
    <widget class="QWidget" name="tab_3">
