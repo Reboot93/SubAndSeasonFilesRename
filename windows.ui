@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
+ <author>Reboot93</author>
  <class>Form</class>
  <widget class="QWidget" name="Form">
   <property name="geometry">
@@ -26,8 +27,8 @@
    <string>剧集与字幕批量改名</string>
   </property>
   <property name="windowIcon">
-   <iconset>
-    <normaloff>icon/logo.png</normaloff>icon/logo.png</iconset>
+   <iconset resource="qticon.qrc">
+    <normaloff>:/icon/icon/logo.png</normaloff>:/icon/icon/logo.png</iconset>
   </property>
   <property name="windowOpacity">
    <double>1.000000000000000</double>
@@ -109,8 +110,8 @@
      <string/>
     </property>
     <attribute name="icon">
-     <iconset theme="rename">
-      <normaloff>icon/rename.png</normaloff>icon/rename.png</iconset>
+     <iconset resource="qticon.qrc">
+      <normaloff>:/icon/icon/rename.png</normaloff>:/icon/icon/rename.png</iconset>
     </attribute>
     <attribute name="title">
      <string>剧集文件批量重命名</string>
@@ -140,7 +141,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>icon/movie.png</pixmap>
+       <pixmap resource="qticon.qrc">:/icon/icon/movie.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -193,18 +194,21 @@
      <widget class="QPushButton" name="pushButton_rename_del_all">
       <property name="geometry">
        <rect>
-        <x>470</x>
+        <x>540</x>
         <y>354</y>
-        <width>101</width>
+        <width>31</width>
         <height>31</height>
        </rect>
       </property>
+      <property name="toolTip">
+       <string>清除全部</string>
+      </property>
       <property name="text">
-       <string>清除所有</string>
+       <string/>
       </property>
       <property name="icon">
-       <iconset>
-        <normaloff>icon/del.png</normaloff>icon/del.png</iconset>
+       <iconset resource="qticon.qrc">
+        <normaloff>:/icon/icon/del.png</normaloff>:/icon/icon/del.png</iconset>
       </property>
       <property name="iconSize">
        <size>
@@ -216,18 +220,21 @@
      <widget class="QPushButton" name="pushButton_rename_add">
       <property name="geometry">
        <rect>
-        <x>250</x>
+        <x>460</x>
         <y>354</y>
-        <width>101</width>
+        <width>31</width>
         <height>31</height>
        </rect>
       </property>
+      <property name="toolTip">
+       <string>添加</string>
+      </property>
       <property name="text">
-       <string>添加文件</string>
+       <string/>
       </property>
       <property name="icon">
-       <iconset>
-        <normaloff>icon/plus.png</normaloff>icon/plus.png</iconset>
+       <iconset resource="qticon.qrc">
+        <normaloff>:/icon/icon/plus.png</normaloff>:/icon/icon/plus.png</iconset>
       </property>
       <property name="iconSize">
        <size>
@@ -239,9 +246,9 @@
      <widget class="QPushButton" name="pushButton_rename_del_one">
       <property name="geometry">
        <rect>
-        <x>360</x>
+        <x>500</x>
         <y>354</y>
-        <width>101</width>
+        <width>31</width>
         <height>31</height>
        </rect>
       </property>
@@ -249,11 +256,11 @@
        <string>清除选中</string>
       </property>
       <property name="text">
-       <string>清除选中</string>
+       <string/>
       </property>
       <property name="icon">
-       <iconset>
-        <normaloff>icon/close.png</normaloff>icon/close.png</iconset>
+       <iconset resource="qticon.qrc">
+        <normaloff>:/icon/icon/close.png</normaloff>:/icon/icon/close.png</iconset>
       </property>
       <property name="iconSize">
        <size>
@@ -293,6 +300,9 @@
             <pointsize>14</pointsize>
            </font>
           </property>
+          <property name="toolTip">
+           <string>修改为 [SxxExx] 格式</string>
+          </property>
           <property name="text">
            <string>      第</string>
           </property>
@@ -300,6 +310,9 @@
         </item>
         <item>
          <widget class="QSpinBox" name="spinBox_season">
+          <property name="toolTip">
+           <string>修改为 [SxxExx] 格式</string>
+          </property>
           <property name="minimum">
            <number>0</number>
           </property>
@@ -312,6 +325,9 @@
             <family>微软雅黑</family>
             <pointsize>14</pointsize>
            </font>
+          </property>
+          <property name="toolTip">
+           <string>修改为 [SxxExx] 格式</string>
           </property>
           <property name="text">
            <string>     季</string>
@@ -381,13 +397,15 @@
           <pointsize>20</pointsize>
          </font>
         </property>
+        <property name="toolTip">
+         <string>开始修改</string>
+        </property>
         <property name="text">
          <string>批量修改</string>
         </property>
         <property name="icon">
-         <iconset>
-          <normalon>icon/start.png</normalon>
-         </iconset>
+         <iconset resource="qticon.qrc">
+          <normaloff>:/icon/icon/start.png</normaloff>:/icon/icon/start.png</iconset>
         </property>
         <property name="iconSize">
          <size>
@@ -402,7 +420,7 @@
    </widget>
    <widget class="QWidget" name="tab_2">
     <attribute name="icon">
-     <iconset theme="字幕">
+     <iconset>
       <normaloff>icon/subtitles.png</normaloff>icon/subtitles.png</iconset>
     </attribute>
     <attribute name="title">
@@ -439,14 +457,17 @@
        <string/>
       </property>
       <property name="icon">
-       <iconset>
-        <normaloff>icon/up.png</normaloff>icon/up.png</iconset>
+       <iconset resource="qticon.qrc">
+        <normaloff>:/icon/icon/up.png</normaloff>:/icon/icon/up.png</iconset>
       </property>
       <property name="iconSize">
        <size>
         <width>31</width>
         <height>31</height>
        </size>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_sub_down">
@@ -465,8 +486,8 @@
        <string/>
       </property>
       <property name="icon">
-       <iconset>
-        <normaloff>icon/down.png</normaloff>icon/down.png</iconset>
+       <iconset resource="qticon.qrc">
+        <normaloff>:/icon/icon/down.png</normaloff>:/icon/icon/down.png</iconset>
       </property>
       <property name="iconSize">
        <size>
@@ -474,13 +495,16 @@
         <height>31</height>
        </size>
       </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
      </widget>
      <widget class="QPushButton" name="pushButton_sub_del_one">
       <property name="geometry">
        <rect>
-        <x>220</x>
+        <x>350</x>
         <y>310</y>
-        <width>101</width>
+        <width>31</width>
         <height>31</height>
        </rect>
       </property>
@@ -488,11 +512,11 @@
        <string>清除选中</string>
       </property>
       <property name="text">
-       <string>清除选中</string>
+       <string/>
       </property>
       <property name="icon">
-       <iconset>
-        <normaloff>icon/close.png</normaloff>icon/close.png</iconset>
+       <iconset resource="qticon.qrc">
+        <normaloff>:/icon/icon/close.png</normaloff>:/icon/icon/close.png</iconset>
       </property>
       <property name="iconSize">
        <size>
@@ -500,13 +524,16 @@
         <height>29</height>
        </size>
       </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
      </widget>
      <widget class="QPushButton" name="pushButton_sub_add">
       <property name="geometry">
        <rect>
-        <x>150</x>
+        <x>310</x>
         <y>310</y>
-        <width>71</width>
+        <width>31</width>
         <height>31</height>
        </rect>
       </property>
@@ -514,11 +541,11 @@
        <string>添加</string>
       </property>
       <property name="text">
-       <string notr="true">添加</string>
+       <string notr="true"/>
       </property>
       <property name="icon">
-       <iconset>
-        <normaloff>icon/plus.png</normaloff>icon/plus.png</iconset>
+       <iconset resource="qticon.qrc">
+        <normaloff>:/icon/icon/plus.png</normaloff>:/icon/icon/plus.png</iconset>
       </property>
       <property name="iconSize">
        <size>
@@ -526,13 +553,16 @@
         <height>29</height>
        </size>
       </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
      </widget>
      <widget class="QPushButton" name="pushButton_sub_del_all">
       <property name="geometry">
        <rect>
-        <x>320</x>
+        <x>390</x>
         <y>310</y>
-        <width>101</width>
+        <width>31</width>
         <height>31</height>
        </rect>
       </property>
@@ -540,17 +570,20 @@
        <string>清除全部</string>
       </property>
       <property name="text">
-       <string notr="true">清除所有</string>
+       <string notr="true"/>
       </property>
       <property name="icon">
-       <iconset>
-        <normaloff>icon/del.png</normaloff>icon/del.png</iconset>
+       <iconset resource="qticon.qrc">
+        <normaloff>:/icon/icon/del.png</normaloff>:/icon/icon/del.png</iconset>
       </property>
       <property name="iconSize">
        <size>
         <width>29</width>
         <height>29</height>
        </size>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
       </property>
      </widget>
      <widget class="QLabel" name="label">
@@ -610,7 +643,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>icon/subtitles.png</pixmap>
+       <pixmap resource="qticon.qrc">:/icon/icon/subtitles.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -636,20 +669,26 @@
        </rect>
       </property>
       <property name="toolTip">
-       <string>下移一位</string>
+       <string>重新排序</string>
       </property>
       <property name="text">
        <string/>
       </property>
       <property name="icon">
-       <iconset>
-        <normaloff>icon/flash.png</normaloff>icon/flash.png</iconset>
+       <iconset resource="qticon.qrc">
+        <normaloff>:/icon/icon/flash.png</normaloff>:/icon/icon/flash.png</iconset>
       </property>
       <property name="iconSize">
        <size>
         <width>31</width>
         <height>31</height>
        </size>
+      </property>
+      <property name="default">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
       </property>
      </widget>
     </widget>
@@ -684,14 +723,17 @@
        <string/>
       </property>
       <property name="icon">
-       <iconset>
-        <normaloff>icon/up.png</normaloff>icon/up.png</iconset>
+       <iconset resource="qticon.qrc">
+        <normaloff>:/icon/icon/up.png</normaloff>:/icon/icon/up.png</iconset>
       </property>
       <property name="iconSize">
        <size>
         <width>31</width>
         <height>31</height>
        </size>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
       </property>
      </widget>
      <widget class="QPushButton" name="pushButton_movie_down">
@@ -710,14 +752,17 @@
        <string/>
       </property>
       <property name="icon">
-       <iconset>
-        <normaloff>icon/down.png</normaloff>icon/down.png</iconset>
+       <iconset resource="qticon.qrc">
+        <normaloff>:/icon/icon/down.png</normaloff>:/icon/icon/down.png</iconset>
       </property>
       <property name="iconSize">
        <size>
         <width>31</width>
         <height>31</height>
        </size>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
       </property>
      </widget>
      <widget class="QLabel" name="label_2">
@@ -777,7 +822,7 @@
        <string/>
       </property>
       <property name="pixmap">
-       <pixmap>icon/movie.png</pixmap>
+       <pixmap resource="qticon.qrc">:/icon/icon/movie.png</pixmap>
       </property>
       <property name="scaledContents">
        <bool>true</bool>
@@ -786,9 +831,9 @@
      <widget class="QPushButton" name="pushButton_movie_del_one">
       <property name="geometry">
        <rect>
-        <x>220</x>
+        <x>350</x>
         <y>310</y>
-        <width>101</width>
+        <width>31</width>
         <height>31</height>
        </rect>
       </property>
@@ -796,11 +841,11 @@
        <string>清除选中</string>
       </property>
       <property name="text">
-       <string>清除选中</string>
+       <string/>
       </property>
       <property name="icon">
-       <iconset>
-        <normaloff>icon/close.png</normaloff>icon/close.png</iconset>
+       <iconset resource="qticon.qrc">
+        <normaloff>:/icon/icon/close.png</normaloff>:/icon/icon/close.png</iconset>
       </property>
       <property name="iconSize">
        <size>
@@ -808,13 +853,16 @@
         <height>29</height>
        </size>
       </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
      </widget>
      <widget class="QPushButton" name="pushButton_movie_del_all">
       <property name="geometry">
        <rect>
-        <x>320</x>
+        <x>390</x>
         <y>310</y>
-        <width>101</width>
+        <width>31</width>
         <height>31</height>
        </rect>
       </property>
@@ -822,11 +870,11 @@
        <string>清除全部</string>
       </property>
       <property name="text">
-       <string notr="true">清除所有</string>
+       <string notr="true"/>
       </property>
       <property name="icon">
-       <iconset>
-        <normaloff>icon/del.png</normaloff>icon/del.png</iconset>
+       <iconset resource="qticon.qrc">
+        <normaloff>:/icon/icon/del.png</normaloff>:/icon/icon/del.png</iconset>
       </property>
       <property name="iconSize">
        <size>
@@ -834,13 +882,16 @@
         <height>29</height>
        </size>
       </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
      </widget>
      <widget class="QPushButton" name="pushButton_movie_add">
       <property name="geometry">
        <rect>
-        <x>150</x>
+        <x>310</x>
         <y>310</y>
-        <width>71</width>
+        <width>31</width>
         <height>31</height>
        </rect>
       </property>
@@ -848,17 +899,20 @@
        <string>添加</string>
       </property>
       <property name="text">
-       <string notr="true">添加</string>
+       <string notr="true"/>
       </property>
       <property name="icon">
-       <iconset>
-        <normaloff>icon/plus.png</normaloff>icon/plus.png</iconset>
+       <iconset resource="qticon.qrc">
+        <normaloff>:/icon/icon/plus.png</normaloff>:/icon/icon/plus.png</iconset>
       </property>
       <property name="iconSize">
        <size>
         <width>29</width>
         <height>29</height>
        </size>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
       </property>
      </widget>
      <widget class="QListWidget" name="listWidget_movie">
@@ -881,20 +935,23 @@
        </rect>
       </property>
       <property name="toolTip">
-       <string>下移一位</string>
+       <string>重新排序</string>
       </property>
       <property name="text">
        <string/>
       </property>
       <property name="icon">
-       <iconset>
-        <normaloff>icon/flash.png</normaloff>icon/flash.png</iconset>
+       <iconset resource="qticon.qrc">
+        <normaloff>:/icon/icon/flash.png</normaloff>:/icon/icon/flash.png</iconset>
       </property>
       <property name="iconSize">
        <size>
         <width>31</width>
         <height>31</height>
        </size>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
       </property>
      </widget>
     </widget>
@@ -919,8 +976,8 @@
       <string>批量修改</string>
      </property>
      <property name="icon">
-      <iconset>
-       <normaloff>icon/start.png</normaloff>icon/start.png</iconset>
+      <iconset resource="qticon.qrc">
+       <normaloff>:/icon/icon/start.png</normaloff>:/icon/icon/start.png</iconset>
      </property>
      <property name="iconSize">
       <size>
@@ -994,8 +1051,8 @@
        <string notr="true">eng</string>
       </property>
       <property name="icon">
-       <iconset>
-        <normaloff>icon/eng.png</normaloff>icon/eng.png</iconset>
+       <iconset resource="qticon.qrc">
+        <normaloff>:/icon/icon/eng.png</normaloff>:/icon/icon/eng.png</iconset>
       </property>
       <property name="iconSize">
        <size>
@@ -1026,8 +1083,8 @@
        <string notr="true">cht</string>
       </property>
       <property name="icon">
-       <iconset>
-        <normaloff>icon/cht.png</normaloff>icon/cht.png</iconset>
+       <iconset resource="qticon.qrc">
+        <normaloff>:/icon/icon/cht.png</normaloff>:/icon/icon/cht.png</iconset>
       </property>
       <property name="iconSize">
        <size>
@@ -1054,12 +1111,15 @@
         <pointsize>11</pointsize>
        </font>
       </property>
+      <property name="toolTip">
+       <string/>
+      </property>
       <property name="text">
        <string notr="true">chs</string>
       </property>
       <property name="icon">
-       <iconset>
-        <normaloff>icon/chs.png</normaloff>icon/chs.png</iconset>
+       <iconset resource="qticon.qrc">
+        <normaloff>:/icon/icon/chs.png</normaloff>:/icon/icon/chs.png</iconset>
       </property>
       <property name="iconSize">
        <size>
@@ -1075,8 +1135,8 @@
    </widget>
    <widget class="QWidget" name="tab_3">
     <attribute name="icon">
-     <iconset>
-      <normaloff>icon/info.png</normaloff>icon/info.png</iconset>
+     <iconset resource="qticon.qrc">
+      <normaloff>:/icon/icon/info.png</normaloff>:/icon/icon/info.png</iconset>
     </attribute>
     <attribute name="title">
      <string>关于</string>
@@ -1084,17 +1144,17 @@
     <widget class="QLabel" name="label_4">
      <property name="geometry">
       <rect>
-       <x>580</x>
-       <y>330</y>
-       <width>61</width>
-       <height>61</height>
+       <x>670</x>
+       <y>350</y>
+       <width>51</width>
+       <height>51</height>
       </rect>
      </property>
      <property name="text">
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap>icon/Python.png</pixmap>
+      <pixmap resource="qticon.qrc">:/icon/icon/Python.png</pixmap>
      </property>
      <property name="scaledContents">
       <bool>true</bool>
@@ -1103,8 +1163,8 @@
     <widget class="QLabel" name="label_8">
      <property name="geometry">
       <rect>
-       <x>420</x>
-       <y>340</y>
+       <x>530</x>
+       <y>350</y>
        <width>141</width>
        <height>41</height>
       </rect>
@@ -1124,16 +1184,16 @@
     <widget class="QLabel" name="label_9">
      <property name="geometry">
       <rect>
-       <x>660</x>
-       <y>340</y>
-       <width>211</width>
+       <x>730</x>
+       <y>350</y>
+       <width>151</width>
        <height>41</height>
       </rect>
      </property>
      <property name="font">
       <font>
        <family>MV Boli</family>
-       <pointsize>22</pointsize>
+       <pointsize>16</pointsize>
        <weight>50</weight>
        <bold>false</bold>
       </font>
@@ -1145,30 +1205,30 @@
     <widget class="QLabel" name="label_10">
      <property name="geometry">
       <rect>
-       <x>280</x>
-       <y>60</y>
-       <width>131</width>
+       <x>370</x>
+       <y>180</y>
+       <width>141</width>
        <height>31</height>
       </rect>
      </property>
      <property name="font">
       <font>
-       <family>微软雅黑</family>
-       <pointsize>12</pointsize>
-       <weight>50</weight>
-       <bold>false</bold>
+       <family>Rockwell Extra Bold</family>
+       <pointsize>18</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
       </font>
      </property>
      <property name="text">
-      <string>作者：Reboot93</string>
+      <string>Reboot93</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_11">
      <property name="geometry">
       <rect>
-       <x>280</x>
-       <y>100</y>
-       <width>131</width>
+       <x>20</x>
+       <y>360</y>
+       <width>91</width>
        <height>31</height>
       </rect>
      </property>
@@ -1187,17 +1247,17 @@
     <widget class="QLabel" name="label_12">
      <property name="geometry">
       <rect>
-       <x>20</x>
-       <y>10</y>
-       <width>191</width>
-       <height>191</height>
+       <x>380</x>
+       <y>20</y>
+       <width>121</width>
+       <height>121</height>
       </rect>
      </property>
      <property name="text">
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap>icon/logo.png</pixmap>
+      <pixmap resource="qticon.qrc">:/icon/icon/logo.png</pixmap>
      </property>
      <property name="scaledContents">
       <bool>true</bool>
@@ -1206,19 +1266,65 @@
     <widget class="QLabel" name="label_3">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>345</y>
-       <width>301</width>
-       <height>31</height>
+       <x>340</x>
+       <y>240</y>
+       <width>291</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>华康少女文字W5-A</family>
+       <pointsize>18</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>我想要星星⭐⭐，请点我</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>230</y>
+       <width>101</width>
+       <height>101</height>
       </rect>
      </property>
      <property name="text">
-      <string>界面参考：字幕文件批量改名(作者：乌拉狸)</string>
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="qticon.qrc">:/icon/icon/github.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_19">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>290</y>
+       <width>431</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>微软雅黑</family>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>https://github.com/Reboot93/SubAndSeasonFilesRename</string>
      </property>
     </widget>
    </widget>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="qticon.qrc"/>
+ </resources>
  <connections/>
 </ui>
