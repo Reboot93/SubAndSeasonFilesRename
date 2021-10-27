@@ -250,6 +250,7 @@ class MainWindow(QWidget, Ui_Form):
                 type1 = re.search(r'EP[0-9]+', filename)
                 type2 = re.search(r'\[[0-9]+[v[0-9]{1,3}[A-Z]{0,4}]?[OVA]?\]', filename)
                 type3 = re.search(r'【[0-9]+[v[0-9]{1,3}[A-Z]{0,4}]?[OVA]?】', filename)
+                type4 = re.search(r' [0-9]{1,4} ', filename)
                 season = self.spinBox_season.text()
                 if not self.groupBox_rename.isChecked():
                     if type1 != None:
@@ -266,6 +267,10 @@ class MainWindow(QWidget, Ui_Form):
                     elif type3 != None:
                         newname = filename[:(type3.span())[0] + 1] + 'S' + season + 'E' + filename[
                                                                                           (type3.span(0))[0] + 1:]
+                        list = list + newname + '\n'
+                    elif type4 != None:
+                        newname = filename[:(type4.span())[0] + 1] + 'S' + season + 'E' + filename[
+                                                                                          (type4.span(0))[0] + 1:]
                         list = list + newname + '\n'
                     else:
                         newname = '%s --- error' & filename
@@ -292,6 +297,11 @@ class MainWindow(QWidget, Ui_Form):
                                                                                                                  filename.rfind(
                                                                                                                      '.')):]
                         list = list + newname + '\n'
+                    elif type4 != None:
+                        newname = self.lineEdit_rename.text() + '[S' + season + 'E' + (type4.group()[1:]) + filename[(
+                                                                                                                         filename.rfind(
+                                                                                                                             '.')):]
+                        list = list + newname + '\n'
                     else:
                         newname = filename + ' --- error'
                         list = list + newname + '\n'
@@ -304,6 +314,7 @@ class MainWindow(QWidget, Ui_Form):
                         type1 = re.search(r'EP[0-9]+', filename)
                         type2 = re.search(r'\[[0-9]+[v[0-9]{1,3}[A-Z]{0,4}]?[OVA]?\]', filename)
                         type3 = re.search(r'【[0-9]+[v[0-9]{1,3}[A-Z]{0,4}]?[OVA]?】', filename)
+                        type4 = re.search(r' [0-9]{1,4} ', filename)
                         season = self.spinBox_season.text()
                         if not self.groupBox_rename.isChecked():
                             if type1 != None:
@@ -330,6 +341,15 @@ class MainWindow(QWidget, Ui_Form):
                                                                                                          0))[
                                                                                                          0] + 1:]
                                 os.rename(self.work_dir_season + filename, newname)
+                            elif type4 != None:
+                                newname = self.work_dir_season + filename[
+                                                                 :(type4.span())[
+                                                                      0] + 1] + 'S' + season + 'E' + filename[(
+                                                                                                                  type4.span(
+                                                                                                                      0))[
+                                                                                                                  0] + 1:]
+
+                                os.rename(self.work_dir_season + filename, newname)
                             else:
                                 print('error')
                         else:
@@ -343,7 +363,7 @@ class MainWindow(QWidget, Ui_Form):
                                 os.rename(self.work_dir_season + filename, newname)
                             elif type2 != None:
                                 newname = self.work_dir_season + self.lineEdit_rename.text() + '[S' + season + 'E' + (
-                                type2.group()[1:]) + filename[(filename.rfind('.')):]
+                                    type2.group()[1:]) + filename[(filename.rfind('.')):]
                                 os.rename(self.work_dir_season + filename, newname)
                             elif type3 != None:
                                 newname = self.work_dir_season + self.lineEdit_rename.text() + '[S' + season + 'E' + (
@@ -352,6 +372,10 @@ class MainWindow(QWidget, Ui_Form):
                                                                                                                                    (
                                                                                                                                        filename.rfind(
                                                                                                                                            '.')):]
+                                os.rename(self.work_dir_season + filename, newname)
+                            elif type4 != None:
+                                newname = self.work_dir_season + self.lineEdit_rename.text() + '[S' + season + 'E' + (
+                                    type4.group()[1:]) + filename[(filename.rfind('.')):]
                                 os.rename(self.work_dir_season + filename, newname)
                             else:
                                 newname = '%s --- error' & filename
