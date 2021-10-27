@@ -21,6 +21,8 @@ class Ui_Form(object):
         icon.addPixmap(QtGui.QPixmap(":/icon/icon/logo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         Form.setWindowIcon(icon)
         Form.setWindowOpacity(1.0)
+        Form.setAutoFillBackground(False)
+        Form.setLocale(QtCore.QLocale(QtCore.QLocale.Chinese, QtCore.QLocale.China))
         self.tabWidget = QtWidgets.QTabWidget(Form)
         self.tabWidget.setGeometry(QtCore.QRect(0, 0, 896, 448))
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Expanding, QtWidgets.QSizePolicy.Expanding)
@@ -380,7 +382,7 @@ class Ui_Form(object):
         self.radioButton_lan_chs.setChecked(True)
         self.radioButton_lan_chs.setObjectName("radioButton_lan_chs")
         icon12 = QtGui.QIcon()
-        icon12.addPixmap(QtGui.QPixmap("icon/subtitles.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        icon12.addPixmap(QtGui.QPixmap(":/icon/icon/subtitles.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
         self.tabWidget.addTab(self.tab_2, icon12, "")
         self.tab_3 = QtWidgets.QWidget()
         self.tab_3.setObjectName("tab_3")
@@ -457,7 +459,7 @@ class Ui_Form(object):
         self.tabWidget.addTab(self.tab_3, icon13, "")
 
         self.retranslateUi(Form)
-        self.tabWidget.setCurrentIndex(0)
+        self.tabWidget.setCurrentIndex(1)
         QtCore.QMetaObject.connectSlotsByName(Form)
 
     def retranslateUi(self, Form):
@@ -510,6 +512,4 @@ class Ui_Form(object):
         self.label_3.setText(_translate("Form", "我想要星星⭐⭐，请点我"))
         self.label_19.setText(_translate("Form", "https://github.com/Reboot93/SubAndSeasonFilesRename"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.tab_3), _translate("Form", "关于"))
-
-
 import qt_rc

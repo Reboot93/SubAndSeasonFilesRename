@@ -23,26 +23,33 @@
     <height>446</height>
    </size>
   </property>
-  <property name="windowTitle">
-   <string>剧集与字幕批量改名</string>
-  </property>
-  <property name="windowIcon">
-   <iconset resource="qticon.qrc">
-    <normaloff>:/icon/icon/logo.png</normaloff>:/icon/icon/logo.png</iconset>
-  </property>
-  <property name="windowOpacity">
-   <double>1.000000000000000</double>
-  </property>
-  <widget class="QTabWidget" name="tabWidget">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>896</width>
-     <height>448</height>
-    </rect>
-   </property>
-   <property name="sizePolicy">
+     <property name="windowTitle">
+         <string>剧集与字幕批量改名</string>
+     </property>
+     <property name="windowIcon">
+         <iconset resource="qticon.qrc">
+             <normaloff>:/icon/icon/logo.png</normaloff>:/icon/icon/logo.png
+         </iconset>
+     </property>
+     <property name="windowOpacity">
+         <double>1.000000000000000</double>
+     </property>
+     <property name="autoFillBackground">
+         <bool>false</bool>
+     </property>
+     <property name="locale">
+         <locale language="Chinese" country="China"/>
+     </property>
+     <widget class="QTabWidget" name="tabWidget">
+         <property name="geometry">
+             <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>896</width>
+                 <height>448</height>
+             </rect>
+         </property>
+         <property name="sizePolicy">
     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
      <horstretch>0</horstretch>
      <verstretch>0</verstretch>
@@ -79,7 +86,7 @@
     <enum>QTabWidget::Rounded</enum>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+       <number>1</number>
    </property>
    <property name="iconSize">
     <size>
@@ -419,10 +426,11 @@
     </widget>
    </widget>
    <widget class="QWidget" name="tab_2">
-    <attribute name="icon">
-     <iconset>
-      <normaloff>icon/subtitles.png</normaloff>icon/subtitles.png</iconset>
-    </attribute>
+       <attribute name="icon">
+           <iconset resource="qticon.qrc">
+               <normaloff>:/icon/icon/subtitles.png</normaloff>:/icon/icon/subtitles.png
+           </iconset>
+       </attribute>
     <attribute name="title">
      <string>字幕文件批量重命名</string>
     </attribute>
