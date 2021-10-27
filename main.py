@@ -7,7 +7,6 @@ from windows import Ui_Form
 class MainWindow(QWidget, Ui_Form):
     # 定义点击信号
     chooseSignal = pyqtSignal(str)
-
     work_dir_season = ''
     work_dir_sub = ''
     work_dir_movie = ''
