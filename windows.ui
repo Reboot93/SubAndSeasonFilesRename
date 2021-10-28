@@ -23,16 +23,16 @@
     <height>446</height>
    </size>
   </property>
-  <property name="windowTitle">
-   <string>剧集与字幕批量改名</string>
-  </property>
-  <property name="windowIcon">
-   <iconset resource="qticon.qrc">
-    <normaloff>:/icon/icon/logo.png</normaloff>:/icon/icon/logo.png
-   </iconset>
-  </property>
-  <property name="windowOpacity">
-   <double>1.000000000000000</double>
+     <property name="windowTitle">
+         <string>剧集与字幕批量改名 v1.0.1</string>
+     </property>
+     <property name="windowIcon">
+         <iconset resource="qticon.qrc">
+             <normaloff>:/icon/icon/logo.png</normaloff>:/icon/icon/logo.png
+         </iconset>
+     </property>
+     <property name="windowOpacity">
+         <double>1.000000000000000</double>
      </property>
      <property name="autoFillBackground">
          <bool>false</bool>
@@ -40,16 +40,16 @@
      <property name="locale">
          <locale language="Chinese" country="China"/>
      </property>
-  <widget class="QTabWidget" name="tabWidget">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>896</width>
-     <height>448</height>
-    </rect>
-   </property>
-   <property name="sizePolicy">
+     <widget class="QTabWidget" name="tabWidget">
+         <property name="geometry">
+             <rect>
+                 <x>0</x>
+                 <y>0</y>
+                 <width>896</width>
+                 <height>448</height>
+             </rect>
+         </property>
+         <property name="sizePolicy">
     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
      <horstretch>0</horstretch>
      <verstretch>0</verstretch>
@@ -334,68 +334,141 @@
            </font>
           </property>
           <property name="toolTip">
-           <string>修改为 [SxxExx] 格式</string>
+              <string>修改为 [SxxExx] 格式</string>
           </property>
-          <property name="text">
-           <string>     季</string>
-          </property>
+             <property name="text">
+                 <string>季</string>
+             </property>
          </widget>
         </item>
        </layout>
       </item>
-      <item>
-       <widget class="QGroupBox" name="groupBox_rename">
-        <property name="title">
-         <string>重命名剧集</string>
-        </property>
-        <property name="checkable">
-         <bool>true</bool>
-        </property>
-        <property name="checked">
-         <bool>false</bool>
-        </property>
-        <widget class="QLabel" name="label_17">
-         <property name="geometry">
-          <rect>
-           <x>30</x>
-           <y>20</y>
-           <width>91</width>
-           <height>51</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <family>微软雅黑</family>
-           <pointsize>12</pointsize>
-           <weight>50</weight>
-           <bold>false</bold>
-          </font>
-         </property>
-         <property name="text">
-          <string>重命名为：</string>
-         </property>
-        </widget>
-        <widget class="QLineEdit" name="lineEdit_rename">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>80</y>
-           <width>261</width>
-           <height>20</height>
-          </rect>
-         </property>
-         <property name="font">
-          <font>
-           <family>微软雅黑</family>
-           <pointsize>10</pointsize>
-          </font>
-         </property>
-         <property name="placeholderText">
-          <string>集数信息将会以 [SxxExx] 格式添加在末尾</string>
-         </property>
-        </widget>
-       </widget>
-      </item>
+         <item>
+             <widget class="QGroupBox" name="groupBox_diy">
+                 <property name="title">
+                     <string>自定义识别集数的正则表达式</string>
+                 </property>
+                 <property name="checkable">
+                     <bool>true</bool>
+                 </property>
+                 <property name="checked">
+                     <bool>false</bool>
+                 </property>
+                 <widget class="QLineEdit" name="lineEdit_rename_diy_str">
+                     <property name="geometry">
+                         <rect>
+                             <x>10</x>
+                             <y>20</y>
+                             <width>261</width>
+                             <height>20</height>
+                         </rect>
+                     </property>
+                     <property name="font">
+                         <font>
+                             <family>微软雅黑</family>
+                             <pointsize>10</pointsize>
+                         </font>
+                     </property>
+                     <property name="placeholderText">
+                         <string>在此填入用于识别的表达式，如: \[[0-9]\]</string>
+                     </property>
+                 </widget>
+                 <widget class="QSpinBox" name="spinBox_diy_number">
+                     <property name="geometry">
+                         <rect>
+                             <x>210</x>
+                             <y>50</y>
+                             <width>41</width>
+                             <height>22</height>
+                         </rect>
+                     </property>
+                 </widget>
+                 <widget class="QLabel" name="label_20">
+                     <property name="geometry">
+                         <rect>
+                             <x>20</x>
+                             <y>50</y>
+                             <width>191</width>
+                             <height>21</height>
+                         </rect>
+                     </property>
+                     <property name="font">
+                         <font>
+                             <family>微软雅黑</family>
+                         </font>
+                     </property>
+                     <property name="text">
+                         <string>数字第一位位于识别部分第</string>
+                     </property>
+                 </widget>
+                 <widget class="QLabel" name="label_21">
+                     <property name="geometry">
+                         <rect>
+                             <x>260</x>
+                             <y>50</y>
+                             <width>16</width>
+                             <height>21</height>
+                         </rect>
+                     </property>
+                     <property name="text">
+                         <string>位</string>
+                     </property>
+                 </widget>
+             </widget>
+         </item>
+         <item>
+             <widget class="QGroupBox" name="groupBox_rename">
+                 <property name="title">
+                     <string>重命名剧集</string>
+                 </property>
+                 <property name="checkable">
+                     <bool>true</bool>
+                 </property>
+                 <property name="checked">
+                     <bool>false</bool>
+                 </property>
+                 <widget class="QLabel" name="label_17">
+                     <property name="geometry">
+                         <rect>
+                             <x>20</x>
+                             <y>20</y>
+                             <width>91</width>
+                             <height>21</height>
+                         </rect>
+                     </property>
+                     <property name="font">
+                         <font>
+                             <family>微软雅黑</family>
+                             <pointsize>12</pointsize>
+                             <weight>50</weight>
+                             <bold>false</bold>
+                         </font>
+                     </property>
+                     <property name="text">
+                         <string>重命名为：</string>
+                     </property>
+                 </widget>
+                 <widget class="QLineEdit" name="lineEdit_rename">
+                     <property name="geometry">
+                         <rect>
+                             <x>10</x>
+                             <y>50</y>
+                             <width>261</width>
+                             <height>20</height>
+                         </rect>
+                     </property>
+                     <property name="font">
+                         <font>
+                             <family>微软雅黑</family>
+                             <pointsize>10</pointsize>
+                         </font>
+                     </property>
+                     <property name="placeholderText">
+                         <string>集数信息将会以 [SxxExx] 格式添加在末尾</string>
+                     </property>
+                 </widget>
+             </widget>
+         </item>
       <item>
        <widget class="QPushButton" name="pushButton_rename_start">
         <property name="font">
@@ -427,9 +500,9 @@
    </widget>
    <widget class="QWidget" name="tab_2">
     <attribute name="icon">
-     <iconset resource="qticon.qrc">
-      <normaloff>:/icon/icon/subtitles.png</normaloff>:/icon/icon/subtitles.png
-     </iconset>
+        <iconset resource="qticon.qrc">
+            <normaloff>:/icon/icon/subtitles.png</normaloff>:/icon/icon/subtitles.png
+        </iconset>
     </attribute>
     <attribute name="title">
      <string>字幕文件批量重命名</string>
@@ -1236,7 +1309,7 @@
       <rect>
        <x>20</x>
        <y>360</y>
-       <width>91</width>
+          <width>101</width>
        <height>31</height>
       </rect>
      </property>
@@ -1249,7 +1322,7 @@
       </font>
      </property>
      <property name="text">
-      <string>版本:   V1.0</string>
+         <string>版本: V1.0.1</string>
      </property>
     </widget>
     <widget class="QLabel" name="label_12">
@@ -1309,25 +1382,46 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QLabel" name="label_19">
-     <property name="geometry">
-      <rect>
-       <x>280</x>
-       <y>290</y>
-       <width>431</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>微软雅黑</family>
-       <pointsize>11</pointsize>
-      </font>
-     </property>
-     <property name="text">
-      <string>https://github.com/Reboot93/SubAndSeasonFilesRename</string>
-     </property>
-    </widget>
+       <widget class="QLineEdit" name="lineEdit">
+           <property name="geometry">
+               <rect>
+                   <x>310</x>
+                   <y>300</y>
+                   <width>381</width>
+                   <height>20</height>
+               </rect>
+           </property>
+           <property name="font">
+               <font>
+                   <family>微软雅黑</family>
+                   <pointsize>10</pointsize>
+               </font>
+           </property>
+           <property name="inputMask">
+               <string/>
+           </property>
+           <property name="text">
+               <string>https://github.com/Reboot93/SubAndSeasonFilesRename</string>
+           </property>
+           <property name="frame">
+               <bool>false</bool>
+           </property>
+           <property name="echoMode">
+               <enum>QLineEdit::Normal</enum>
+           </property>
+           <property name="dragEnabled">
+               <bool>false</bool>
+           </property>
+           <property name="readOnly">
+               <bool>true</bool>
+           </property>
+           <property name="cursorMoveStyle">
+               <enum>Qt::LogicalMoveStyle</enum>
+           </property>
+           <property name="clearButtonEnabled">
+               <bool>false</bool>
+           </property>
+       </widget>
    </widget>
   </widget>
  </widget>

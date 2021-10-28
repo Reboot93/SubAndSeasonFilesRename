@@ -1,6 +1,7 @@
 import sys, time, _thread, os, threading, re
 from PyQt5.QtWidgets import *
-from PyQt5.QtCore import pyqtSignal
+from PyQt5.QtCore import pyqtSignal, Qt
+from PyQt5.QtGui import QCursor
 from windows import Ui_Form
 
 
@@ -253,28 +254,41 @@ class MainWindow(QWidget, Ui_Form):
                 type4 = re.search(r' [0-9]{1,4} ', filename)
                 season = self.spinBox_season.text()
                 if not self.groupBox_rename.isChecked():
-                    if type1 != None:
-                        newname = filename[:(type1.span())[0]] + 'S' + season + 'E' + filename[
-                                                                                      (type1.span(0))[
-                                                                                          0] + 1:]
-                        list = list + newname + '\n'
-                    elif type2 != None:
-                        newname = filename[:(type2.span())[0] + 1] + 'S' + season + 'E' + filename[(
-                                                                                                       type2.span(
-                                                                                                           0))[
-                                                                                                       0] + 1:]
-                        list = list + newname + '\n'
-                    elif type3 != None:
-                        newname = filename[:(type3.span())[0] + 1] + 'S' + season + 'E' + filename[
-                                                                                          (type3.span(0))[0] + 1:]
-                        list = list + newname + '\n'
-                    elif type4 != None:
-                        newname = filename[:(type4.span())[0] + 1] + 'S' + season + 'E' + filename[
-                                                                                          (type4.span(0))[0] + 1:]
-                        list = list + newname + '\n'
+                    if not self.groupBox_diy.isChecked():
+                        if type1 != None:
+                            newname = filename[:(type1.span())[0]] + 'S' + season + 'E' + filename[
+                                                                                          (type1.span(0))[
+                                                                                              0] + 1:]
+                            list = list + newname + '\n'
+                        elif type2 != None:
+                            newname = filename[:(type2.span())[0] + 1] + 'S' + season + 'E' + filename[(
+                                                                                                           type2.span(
+                                                                                                               0))[
+                                                                                                           0] + 1:]
+                            list = list + newname + '\n'
+                        elif type3 != None:
+                            newname = filename[:(type3.span())[0] + 1] + 'S' + season + 'E' + filename[
+                                                                                              (type3.span(0))[0] + 1:]
+                            list = list + newname + '\n'
+                        elif type4 != None:
+                            newname = filename[:(type4.span())[0] + 1] + 'S' + season + 'E' + filename[
+                                                                                              (type4.span(0))[0] + 1:]
+                            list = list + newname + '\n'
+                        else:
+                            newname = '%s --- error' & filename
+                            list = list + newname + '\n'
                     else:
-                        newname = '%s --- error' & filename
-                        list = list + newname + '\n'
+                        type = re.search(r'%s' % self.lineEdit_rename_diy_str.text(), filename)
+                        i = self.spinBox_diy_number.text()
+                        if type != None:
+                            newname = filename[:(type.span())[0] + (int(i) - 1)] + 'S' + season + 'E' + filename[
+                                                                                                        (type.span())[
+                                                                                                            0] + (int(
+                                                                                                            i) - 1):]
+                            list = list + newname + '\n'
+                        else:
+                            newname = '%s --- error' & filename
+                            list = list + newname + '\n'
                 else:
                     if self.lineEdit_rename.text() == '':
                         QMessageBox.warning(self, '错误', '没有指定重命名后的标题！')
@@ -317,41 +331,56 @@ class MainWindow(QWidget, Ui_Form):
                         type4 = re.search(r' [0-9]{1,4} ', filename)
                         season = self.spinBox_season.text()
                         if not self.groupBox_rename.isChecked():
-                            if type1 != None:
-                                newname = self.work_dir_season + filename[
-                                                                 :(type1.span())[0]] + 'S' + season + 'E' + filename[
-                                                                                                            (type1.span(
-                                                                                                                0))[
-                                                                                                                0] + 1:]
-                                os.rename(self.work_dir_season + filename, newname)
-                            elif type2 != None:
-                                newname = self.work_dir_season + filename[
-                                                                 :(type2.span())[
-                                                                      0] + 1] + 'S' + season + 'E' + filename[(
-                                                                                                                  type2.span(
-                                                                                                                      0))[
-                                                                                                                  0] + 1:]
+                            if not self.groupBox_diy.isChecked():
+                                if type1 != None:
+                                    newname = self.work_dir_season + filename[
+                                                                     :(type1.span())[
+                                                                         0]] + 'S' + season + 'E' + filename[
+                                                                                                    (type1.span(
+                                                                                                        0))[
+                                                                                                        0] + 1:]
+                                    os.rename(self.work_dir_season + filename, newname)
+                                elif type2 != None:
+                                    newname = self.work_dir_season + filename[
+                                                                     :(type2.span())[
+                                                                          0] + 1] + 'S' + season + 'E' + filename[(
+                                                                                                                      type2.span(
+                                                                                                                          0))[
+                                                                                                                      0] + 1:]
 
-                                os.rename(self.work_dir_season + filename, newname)
-                            elif type3 != None:
-                                newname = self.work_dir_season + filename[
-                                                                 :(type3.span())[
-                                                                      0] + 1] + 'S' + season + 'E' + filename[
-                                                                                                     (type3.span(
-                                                                                                         0))[
-                                                                                                         0] + 1:]
-                                os.rename(self.work_dir_season + filename, newname)
-                            elif type4 != None:
-                                newname = self.work_dir_season + filename[
-                                                                 :(type4.span())[
-                                                                      0] + 1] + 'S' + season + 'E' + filename[(
-                                                                                                                  type4.span(
-                                                                                                                      0))[
-                                                                                                                  0] + 1:]
+                                    os.rename(self.work_dir_season + filename, newname)
+                                elif type3 != None:
+                                    newname = self.work_dir_season + filename[
+                                                                     :(type3.span())[
+                                                                          0] + 1] + 'S' + season + 'E' + filename[
+                                                                                                         (type3.span(
+                                                                                                             0))[
+                                                                                                             0] + 1:]
+                                    os.rename(self.work_dir_season + filename, newname)
+                                elif type4 != None:
+                                    newname = self.work_dir_season + filename[
+                                                                     :(type4.span())[
+                                                                          0] + 1] + 'S' + season + 'E' + filename[(
+                                                                                                                      type4.span(
+                                                                                                                          0))[
+                                                                                                                      0] + 1:]
 
-                                os.rename(self.work_dir_season + filename, newname)
+                                    os.rename(self.work_dir_season + filename, newname)
+                                else:
+                                    print('error')
                             else:
-                                print('error')
+                                type = re.search(r'%s' % self.lineEdit_rename_diy_str.text(), filename)
+                                i = self.spinBox_diy_number.text()
+                                if type != None:
+                                    newname = self.work_dir_season + filename[
+                                                                     :(type.span())[0] + (int(
+                                                                         i) - 1)] + 'S' + season + 'E' + filename[
+                                                                                                         (type.span())[
+                                                                                                             0] + (int(
+                                                                                                             i) - 1):]
+                                    os.rename(self.work_dir_season + filename, newname)
+                                else:
+                                    pass
                         else:
                             if type1 != None:
                                 newname = self.work_dir_season + self.lineEdit_rename.text() + '[S' + season + 'E' + (
